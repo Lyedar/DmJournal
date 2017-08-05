@@ -1,0 +1,19 @@
+{
+  "name": "dmjournal",
+  "version": "1.0.0",
+  "description": "One location for a Dungeon Master to run a full session of Dungeons and Dragons (Or similar games)",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Lyedar/DmJournal.git"
+  },
+  "author": "Lyedar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Lyedar/DmJournal/issues"
+  },
+  "homepage": "https://github.com/Lyedar/DmJournal#readme"
+}
