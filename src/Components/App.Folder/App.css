@@ -1,0 +1,7 @@
+.App{
+  color: red;
+}
+
+.App :global .heading{
+  color:black;
+}
