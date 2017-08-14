@@ -1,9 +1,11 @@
 //Imports
 import React, { Component } from 'react'
+import { Route, Link } from 'react-router-dom'
 import Header from '../Header.Folder/Header.js'
+import Home from '../Home.Folder/Home.js'
 import styles from './App.css'
 import 'normalize.css'
-import classNames from 'classnames/bind';
+import classNames from 'classnames/bind'
 
 //Consts
 const cx = classNames.bind(styles);
@@ -11,10 +13,13 @@ const cx = classNames.bind(styles);
 
 class App extends Component {
   render () {
-    return(<span className={cx('App')}>
-      <Header/>
-      <div className='heading'> HELLO WORLD </div>
-  </span>)
+    return(
+        <div>
+          <Header/>
+          <Route path="/Home" component={Home}/>
+          <Route path="/" render={()=> (<div> THE APP IS RENDERING </div>)}/>
+        </div>
+    )
   }
 }
 

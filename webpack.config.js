@@ -9,7 +9,8 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 module.exports = {
   entry : `${srcDir}/index.js`,
   output : {
-    filename : 'bundle.js'
+    filename : 'bundle.js',
+    publicPath: '/'
   },
   module:{
     rules: [{
@@ -25,6 +26,9 @@ module.exports = {
       test: /\.css$/,
       use: ExtractTextPlugin.extract(['css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]",camelCase'])
     }]
+  },
+  devServer: {
+    historyApiFallback: true,
   },
   plugins: [
     new HtmlWbppackPlugin({
