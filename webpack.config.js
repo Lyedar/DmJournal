@@ -1,4 +1,4 @@
-const { resolve } = require('path');
+const { resolve } = require('path')
 const srcDir = resolve(__dirname, 'src')
 const HtmlWbppackPlugin = require('html-webpack-plugin')
 const DashboardPlugin = require('webpack-dashboard/plugin')
@@ -19,9 +19,9 @@ module.exports = {
       loader: 'standard-loader',
       exclude: /node_modules/
     }, {
-      test: /\.js$/,
+      test: /\.jsx?$/,
       loader: 'babel-loader',
-      exclude: /node_modules/
+      exclude: /node_modules/,
     }, {
       test: /\.css$/,
       use: ExtractTextPlugin.extract(['css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]",camelCase'])
