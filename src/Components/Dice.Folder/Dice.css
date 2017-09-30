@@ -1,0 +1,12 @@
+
+.type { vertical-align:super; font-size:60%; color:grey; }
+
+.placeholder { color: #CCC; }
+
+.roll {}
+
+.crit { color:darken(green,5%); }
+
+.fum { color:darken(red,10%); }
+
+.total { color:yellow; font-weight:bold; }

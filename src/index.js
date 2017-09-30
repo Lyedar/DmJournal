@@ -7,10 +7,11 @@ import App from './Components/App.Folder/App.jsx'
 import store from './Redux/store.js'
 import './base.css'
 
+
 render((
   <Provider store={store}>
     <BrowserRouter>
-      <App/>
+      <App />
     </BrowserRouter>
   </Provider>
 ), document.getElementById('app'))

@@ -24,7 +24,13 @@ module.exports = {
     'quotes': [
       'error', 'single'
     ],
-    'semi': ['error', 'never']
+    'semi': [
+      'error', 'never'
+    ],
+    'no-console':[
+      'error',
+      {'allow': ['warn', 'error', 'log']}
+    ]
   },
   'globals': {
     '__dirname': true

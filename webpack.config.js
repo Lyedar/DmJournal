@@ -13,20 +13,32 @@ module.exports = {
     publicPath: '/'
   },
   module:{
-    rules: [{
-      enforce: 'pre',
-      test: /\.js$/,
-      loader: 'standard-loader',
-      exclude: /node_modules/
-    }, {
-      test: /\.jsx?$/,
-      loader: 'babel-loader',
-      exclude: /node_modules/,
-    }, {
-      test: /\.css$/,
-      use: ExtractTextPlugin.extract(['css-loader?modules,localIdentName="[name]-[local]-[hash:base64:6]",camelCase'])
-    }]
-  },
+    rules: [
+      {
+        test: /\.test.j$/,
+        loader: 'ignore-loader'
+      },{
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: 'standard-loader',
+        exclude: /node_modules/
+      }, {
+        test: /\.jsx?$/,
+        loader: 'babel-loader',
+        exclude: /node_modules/,
+      }, {
+        test: /\.css$/,
+        use: [
+              {
+                loader: 'css-loader',
+                options: {
+                  modules: true,
+                  localIdentName: '[path][name]__[local]--[hash:base64:5]'
+                }
+              }
+            ]
+          },
+        ],
   devServer: {
     historyApiFallback: true,
   },

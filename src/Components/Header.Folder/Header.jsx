@@ -10,6 +10,7 @@ export default class Header extends Component {
     return (<div>
       HEADER IS RENDERING
       <nav>
+        <Link to="/">App</Link><br/>
         <Link to="/Home">Home</Link>
       </nav>
     </div>)

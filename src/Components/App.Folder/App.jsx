@@ -13,14 +13,14 @@ const cx = classNames.bind(styles)
 class App extends Component {
   render() {
     return (
-      <div className={cx}>
+      <div >
         <Header/>
         <Switch>
           <Route path="/Home" component={Home}/>
           <Route path="/" render={() => (
-            <div>
+            <h2 className={styles.heading}>
               THE APP IS RENDERING
-            </div>
+            </h2>
           )}/>
         </Switch>
       </div>
